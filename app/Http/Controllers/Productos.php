@@ -11,11 +11,20 @@ class Productos extends Controller
 {
     public function getProductos(){
         $categorias = CategoriasModel::all();
-        return view('productos',["categorias" => $categorias]);
+        $productos = ProductosModel::all();
+        return view('productos',["categorias" => $categorias,
+                                "productos" => $productos
+                                
+                                ]);
     } 
 
     public function addProductos(Request $datos){
         $prod = new ProductosModel();
+        
+        if ($datos->hasFile('prodImg')){
+            $fileName = $datos->prodImg->store('productos');;
+            $prod->pro_imagen = $fileName;
+        }   
         $prod->pro_nombre = $datos->input('name');
         $prod->pro_costo = $datos->input('costo');
         $prod->save();
