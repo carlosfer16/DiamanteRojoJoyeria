@@ -1,6 +1,10 @@
 <div class="panel panel-color panel-inverse">
     <div class="panel-heading">
-        <h3 class="panel-title">Agregar Producto</h3>
+        @if($id!=0)
+            <h3 class="panel-title">Editar Producto</h3>
+        @else
+            <h3 class="panel-title">Agregar Producto</h3>
+        @endif        
     </div>
     <div class="panel-body">
         <form action="{{url('productos/addProductos')}}" class="form-horizontal" method="POST" enctype="multipart/form-data" autocomplete="off">
@@ -22,7 +26,7 @@
             <div class="form-group">
                 <label for="" class="control-label col-md-2">Nombre</label>
                 <div class="col-md-10">
-                    <input type="text" class="form-control" name="name" placeholder="Nombre">
+                    <input type="text" class="form-control" name="name" value="" placeholder="Nombre">
                 </div>
             </div>
             <div class="form-group">
