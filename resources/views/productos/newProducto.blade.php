@@ -9,6 +9,7 @@
     <div class="panel-body">
         <form action="{{url('productos/addProductos')}}" class="form-horizontal" method="POST" enctype="multipart/form-data" autocomplete="off">
             {{ csrf_field() }}
+            <input type="hidden" name="id" value="{{$id}}">
             <div class="form-group">
                 <label for="" class="control-label col-md-2">Categoria</label>
                 <div class="col-md-10">
@@ -26,13 +27,21 @@
             <div class="form-group">
                 <label for="" class="control-label col-md-2">Nombre</label>
                 <div class="col-md-10">
-                    <input type="text" class="form-control" name="name" value="" placeholder="Nombre">
+                    @if($id!=0)
+                        <input type="text" class="form-control" name="name" value="{{$oneProd->pro_nombre}}" placeholder="Nombre">
+                    @else
+                        <input type="text" class="form-control" name="name" value="" placeholder="Nombre">
+                    @endif                    
                 </div>
             </div>
             <div class="form-group">
                 <label for="" class="control-label col-md-2">Costo</label>
                 <div class="col-md-10">
-                    <input type="number" step="0.01" name="costo" class="form-control" placeholder="Costo">
+                    @if($id!=0)
+                        <input type="number" step="0.01" name="costo" value="{{$oneProd->pro_costo}}" class="form-control" placeholder="Costo">
+                    @else
+                        <input type="number" step="0.01" name="costo" class="form-control" placeholder="Costo">
+                    @endif                    
                 </div>
             </div>
             <div class="form-group">

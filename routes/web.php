@@ -11,7 +11,7 @@
 |
 */
 Route::get('/', function(){
-    return view('tienda');
+    return view('tienda.tienda');
 });
 
 //PRODUCTOS
@@ -33,6 +33,7 @@ Route::get('administrador/categorias', 'CategoriasController@index');
 Route::post('categorias/editCat', "CategoriasController@editCat");
 
 //FIN CATEGORIAS
+
 Route::post('administrador', "LoginAdminController@index");
 
 Route::get('administrador/login' , "LoginAdminController@login" );
