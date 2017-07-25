@@ -88,7 +88,7 @@
 							
 							<li data-transition="fade" data-slotamount="1" data-masterspeed="1500">
 								<!-- MAIN IMAGE -->
-								<img src="images/main-banner/1.jpg"  alt=""  data-bgfit="" data-bgposition="left top" data-bgrepeat="no-repeat">
+								<img src="{{URL::asset('http://www.rodicar.es/v_portal/inc/imagen.asp?f=slider551.jpg&w=1900&h=663&c=2')}}"  alt=""  data-bgfit="" data-bgposition="left top" data-bgrepeat="no-repeat">
 								
 								<!-- LAYER NR. 1 -->
 								<div class="tp-caption slide1-heading lfb skewtoleft"
@@ -99,7 +99,7 @@
 									data-easing="Power4.easeOut"
 									data-endspeed="400"
 									data-endeasing="Power1.easeIn"
-									style="z-index: 11">custom suites & Blazers
+									style="z-index: 11">Joyeria Diamante Rojo
 								</div>
 								
 								<!-- LAYER NR. 2 -->
@@ -111,7 +111,7 @@
 									data-easing="Power4.easeOut"
 									data-endspeed="400"
 									data-endeasing="Power1.easeIn"
-									style="z-index: 11">FIT AND STYLE MADE FOR YOU
+									style="z-index: 11">EMPRESA TOTALMENTE MEXICANA
 								</div>
 								
 								<!-- LAYER NR. 3 -->
@@ -123,13 +123,13 @@
 									data-easing="Power4.easeOut"
 									data-endspeed="400"
 									data-endeasing="Power1.easeIn"
-									style="z-index: 11"><a href="products.html" class="btn btn-bordered">shop now</a>
+									style="z-index: 11"><a href="products.html" class="btn btn-bordered">COMPRAR AHORA</a>
 								</div>
 							</li>
 							
 							<li data-transition="slide" data-slotamount="2" data-masterspeed="1500">
 								<!-- MAIN IMAGE -->
-								<img src="images/main-banner/2.jpg"  alt=""  data-bgfit="" data-bgposition="left top" data-bgrepeat="no-repeat">
+								<img src="{{URL::asset('http://www.rodicar.es/v_portal/inc/imagen.asp?f=slider551.jpg&w=1900&h=663&c=2')}}"  alt=""  data-bgfit="" data-bgposition="left top" data-bgrepeat="no-repeat">
 
 								<!-- LAYER NR. 1 -->
 								<div class="tp-caption slide2-date skewfromleftshort customout"
@@ -142,7 +142,7 @@
 									data-endspeed="500"
 									data-endeasing="Power4.easeIn"
 									data-captionhidden="on"
-									style="z-index: 7;">2016
+									style="z-index: 7;">2017
 								</div>
 								
 								<!-- LAYER NR. 2 -->
@@ -158,7 +158,7 @@
 									data-splitout="chars"
 									data-elementdelay="0.08"
 									data-endelementdelay="0.08"
-									style="z-index: 11">Collection
+									style="z-index: 11">Joyeria Diamante Rojo
 								</div>
 								
 								<!-- LAYER NR. 3 -->
@@ -190,7 +190,7 @@
 									data-splitout="chars"
 									data-elementdelay="0.08"
 									data-endelementdelay="0.08"
-									style="z-index: 11">FIT AND STYLE MADE FOR YOU
+									style="z-index: 11">TODO POR USTEDES
 								</div>
 								
 							</li>
@@ -205,47 +205,10 @@
 			
 				<!-- Categories
 				============================================= -->
-				<section id="main-categories" class="main-categories">
-					
-					<div class="row">
-						<div class="col-md-4">
-							<div class="main-category">
-								<div class="main-category-content">
-									<h3>women jackets</h3>
-									<p>it is a long established fact that a reader will be distracted.</p>
-									<a href="products.html" class="btn btn-default">shop now</a>
-								</div>
-								<img class="smooth" src="images/main-categories/1.jpg" alt="">
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="main-category image-top">
-								<img class="smooth" src="images/main-categories/2.jpg" alt="">
-								<div class="main-category-content">
-									<h3>man watches</h3>
-									<p>it is a long established fact that a reader will be distracted.</p>
-									<a href="products.html" class="btn btn-default">shop now</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="main-category">
-								<div class="main-category-content">
-									<h3>bag fashion</h3>
-									<p>it is a long established fact that a reader will be distracted.</p>
-									<a href="products.html" class="btn btn-default">shop now</a>
-								</div>
-								<img class="smooth" src="images/main-categories/3.jpg" alt="">
-							</div>
-						</div>
-					</div>
-					
-				</section>
-				
 				
 				<!-- Featured Products
 				============================================= -->
-				<section id="featured-products" class="no-padding relative">
+				<section id="featured-products" class="no-padding relative" style="margin-top:25px;">
 					
 					<h2>Featured Products</h2>
 					
@@ -257,127 +220,45 @@
 					
 					<div id="Container-featured-products" class="container">
 						<ul class="product-column portfolio-four-column clearfix">
-							<li class="mix today">
-								<div class="product">
-									<a href="products.html"><img src="images/featured-products/today/1.jpg" alt=""></a>
-									<h4>JACKETS & COATS</h4>
-									<p>it is a long established distracted.</p>
-									<p class="price">$100.00</p>
-								</div>
-							</li>
-							<li class="mix today">
-								<div class="product">
-									<a href="products.html"><img src="images/featured-products/today/2.jpg" alt=""></a>
-									<h4>JACKETS & COATS</h4>
-									<p>it is a long established distracted.</p>
-									<p class="price decreased"><u>$999.00</u> $920.00</p>
-								</div>
-							</li>
-							<li class="mix today">
-								<div class="product">
-									<a href="products.html"><img src="images/featured-products/today/3.jpg" alt=""></a>
-									<h4>JACKETS & COATS</h4>
-									<p>it is a long established distracted.</p>
-									<p class="price">$100.00</p>
-								</div>
-							</li>
-							<li class="mix today">
-								<div class="product">
-									<a href="products.html"><img src="images/featured-products/today/4.jpg" alt=""></a>
-									<h4>JACKETS & COATS</h4>
-									<p>it is a long established distracted.</p>
-									<p class="price">$100.00</p>
-								</div>
-							</li>
-							
-							<li class="mix weekly">
-								<div class="product">
-									<a href="products.html"><img src="images/featured-products/today/1.jpg" alt=""></a>
-									<h4>JACKETS & COATS</h4>
-									<p>it is a long established distracted.</p>
-									<p class="price">$100.00</p>
-								</div>
-							</li>
-							<li class="mix weekly">
-								<div class="product">
-									<a href="products.html"><img src="images/featured-products/today/2.jpg" alt=""></a>
-									<h4>JACKETS & COATS</h4>
-									<p>it is a long established distracted.</p>
-									<p class="price decreased"><u>$999.00</u> $920.00</p>
-								</div>
-							</li>
-							<li class="mix weekly">
-								<div class="product">
-									<a href="products.html"><img src="images/featured-products/today/3.jpg" alt=""></a>
-									<h4>JACKETS & COATS</h4>
-									<p>it is a long established distracted.</p>
-									<p class="price">$100.00</p>
-								</div>
-							</li>
-							<li class="mix weekly">
-								<div class="product">
-									<a href="products.html"><img src="images/featured-products/today/4.jpg" alt=""></a>
-									<h4>JACKETS & COATS</h4>
-									<p>it is a long established distracted.</p>
-									<p class="price">$100.00</p>
-								</div>
-							</li>
-							
-							<li class="mix monthly">
-								<div class="product">
-									<a href="products.html"><img src="images/featured-products/today/1.jpg" alt=""></a>
-									<h4>JACKETS & COATS</h4>
-									<p>it is a long established distracted.</p>
-									<p class="price">$100.00</p>
-								</div>
-							</li>
-							<li class="mix monthly">
-								<div class="product">
-									<a href="products.html"><img src="images/featured-products/today/2.jpg" alt=""></a>
-									<h4>JACKETS & COATS</h4>
-									<p>it is a long established distracted.</p>
-									<p class="price decreased"><u>$999.00</u> $920.00</p>
-								</div>
-							</li>
-							<li class="mix monthly">
-								<div class="product">
-									<a href="products.html"><img src="images/featured-products/today/3.jpg" alt=""></a>
-									<h4>JACKETS & COATS</h4>
-									<p>it is a long established distracted.</p>
-									<p class="price">$100.00</p>
-								</div>
-							</li>
-							<li class="mix monthly">
-								<div class="product">
-									<a href="products.html"><img src="images/featured-products/today/4.jpg" alt=""></a>
-									<h4>JACKETS & COATS</h4>
-									<p>it is a long established distracted.</p>
-									<p class="price">$100.00</p>
-								</div>
-							</li>
+							@foreach($productos as $pro)
+								<li class="mix today">
+									<div class="product">
+										<a href="products.html"><img src="{{URL::asset('templete/images/featured-products/today/1.jpg')}}" alt=""></a>
+										<h4>{{$pro->pro_nombre}}</h4>
+										<p>{{$pro->pro_desc}}</p>
+										<p class="price">${{$pro->pro_costo}}</p>
+									</div>
+								</li>
+							@endforeach
+
+							@foreach($productos as $pro)
+								<li class="mix weekly">
+									<div class="product">
+										<a href="products.html"><img src="{{URL::asset('templete/images/featured-products/today/1.jpg')}}" alt=""></a>
+										<h4>{{$pro->pro_nombre}}</h4>
+										<p>{{$pro->pro_desc}}</p>
+										<p class="price">${{$pro->pro_costo}}</p>
+									</div>
+								</li>
+							@endforeach
+
+							@foreach($productos as $pro)
+								<li class="mix monthly">
+									<div class="product">
+										<a href="products.html"><img src="{{URL::asset('templete/images/featured-products/today/1.jpg')}}" alt=""></a>
+										<h4>{{$pro->pro_nombre}}</h4>
+										<p>{{$pro->pro_desc}}</p>
+										<p class="price">${{$pro->pro_costo}}</p>
+									</div>
+								</li>
+							@endforeach
 						</ul>
 					</div>
 					
 					
 				</section>
 				
-				
-				<!-- Par
-					ax
-				============================================= -->
-				<section class="par
-					ax-sec" style="background:url(images/par
-					ax/1.jpg);">
-				
-					<div class="par
-						ax-content">
-						<h1>Designer Collection 2014</h1>
-						<p>it is a long established fact that a reader will be distracted by the readable content Graphich design of a page when looking at its layout. The point of using  more-or-less normal Graphi designing.</p>
-						<br>
-						<a href="#." class="btn btn-default btn-white">shop now</a>
-					</div>
-				
-				</section>
+								
 				
 				<!-- New Products
 				============================================= -->
@@ -387,62 +268,17 @@
 					<br>
 					
 					<div class="three-item-carousel arrows owl-carousel">
-					
-						<div class="product">
-							<a href="#."><img src="images/new-products/1.jpg" alt=""></a>
-							<h4>JACKETS & COATS</h4>
-							<p>it is a long established distracted.</p>
-							<p class="price">$100.00</p>
-						</div>
-						
-						<div class="product">
-							<a href="#."><img src="images/new-products/2.jpg" alt=""></a>
-							<h4>JACKETS & COATS</h4>
-							<p>it is a long established distracted.</p>
-							<p class="price decreased"><u>$999.00</u> $920.00</p>
-						</div>
-						
-						<div class="product">
-							<a href="#."><img src="images/new-products/3.jpg" alt=""></a>
-							<h4>JACKETS & COATS</h4>
-							<p>it is a long established distracted.</p>
-							<p class="price">$100.00</p>
-						</div>
-						
-						<div class="product">
-							<a href="#."><img src="images/new-products/4.jpg" alt=""></a>
-							<h4>JACKETS & COATS</h4>
-							<p>it is a long established distracted.</p>
-							<p class="price">$100.00</p>
-						</div>
-						
-						<div class="product">
-							<a href="#."><img src="images/new-products/1.jpg" alt=""></a>
-							<h4>JACKETS & COATS</h4>
-							<p>it is a long established distracted.</p>
-							<p class="price">$100.00</p>
-						</div>
-						
-						<div class="product">
-							<a href="#."><img src="images/new-products/2.jpg" alt=""></a>
-							<h4>JACKETS & COATS</h4>
-							<p>it is a long established distracted.</p>
-							<p class="price decreased"><u>$999.00</u> $920.00</p>
-						</div>
-						
-						<div class="product">
-							<a href="#."><img src="images/new-products/3.jpg" alt=""></a>
-							<h4>JACKETS & COATS</h4>
-							<p>it is a long established distracted.</p>
-							<p class="price">$100.00</p>
-						</div>
-						
-						<div class="product">
-							<a href="#."><img src="images/new-products/4.jpg" alt=""></a>
-							<h4>JACKETS & COATS</h4>
-							<p>it is a long established distracted.</p>
-							<p class="price">$100.00</p>
-						</div>
+
+						@forelse($newProductos as $prod)
+							<div class="product">
+								<a href="#."><img src="{{URL::asset('templete/images/new-products/1.jpg')}}" alt=""></a>
+								<h4>{{$prod->pro_nombre}}</h4>
+								<p>{{$pro->pro_desc}}</p>
+								<p class="price">${{$prod->pro_costo}}</p>
+							</div>
+						@empty
+							<center><h1>Sin productos</h1></center>
+						@endforelse
 					
 					</div>
 					
@@ -450,161 +286,11 @@
 				
 				<!-- Add Section
 				============================================= -->
-				<div class="row">
-					<div class="col-md-7">
-						<div class="add-banner-slider">
-							<div class="add-banner">
-								<img src="images/add-banner/1.jpg" alt="">
-								<div class="add-banner-content">
-									<p>Meet your New Best <strong>Lens</strong></p>
-									<a href="products.html" class="btn btn-default btn-white">shop now</a>
-								</div>
-							</div>
-							<div class="add-banner">
-								<img src="images/add-banner/2.jpg" alt="">
-								<div class="add-banner-content">
-									<p>Meet your New Best <strong>Lens</strong></p>
-									<a href="products.html" class="btn btn-default btn-white">shop now</a>
-								</div>
-							</div>
-							<div class="add-banner">
-								<img src="images/add-banner/3.jpg" alt="">
-								<div class="add-banner-content">
-									<p>Meet your New Best <strong>Lens</strong></p>
-									<a href="products.html" class="btn btn-default btn-white">shop now</a>
-								</div>
-							</div>
-							<div class="add-banner">
-								<img src="images/add-banner/1.jpg" alt="">
-								<div class="add-banner-content">
-									<p>Meet your New Best <strong>Lens</strong></p>
-									<a href="products.html" class="btn btn-default btn-white">shop now</a>
-								</div>
-							</div>
-							<div class="add-banner">
-								<img src="images/add-banner/2.jpg" alt="">
-								<div class="add-banner-content">
-									<p>Meet your New Best <strong>Lens</strong></p>
-									<a href="products.html" class="btn btn-default btn-white">shop now</a>
-								</div>
-							</div>
-							<div class="add-banner">
-								<img src="images/add-banner/3.jpg" alt="">
-								<div class="add-banner-content">
-									<p>Meet your New Best <strong>Lens</strong></p>
-									<a href="products.html" class="btn btn-default btn-white">shop now</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-5">
-					
-						<div class="weekend-deals-widget">
-							<div class="weekend-deals-widget-top">
-								<h3><img src="images/weekend-deals.png" alt=""><span>25% - 90% off</span></h3>
-								<p>Offer ends on 04 Sep 00:00 (GMT - 8:00)</p>
-							</div>
-							<div class="weekend-deals-counter">
-								<label>Time Left</label>
-								<div class="countdown"></div>
-							</div>
-						</div>
-					
-					</div>
-				</div>
-				
+						
 				
 				<!-- Latest Blog
 				============================================= -->
-				<section id="latest-blog">
-					
-					<h2>Latest From Our Blog</h2>
-					<br>
-					
-					<div class="three-item-carousel arrows owl-carousel">
-						
-						<article class="blog-post">
-							<div class="entry-image">
-								<a href="blog-detail.html"><img src="images/blog/1.jpg" alt=""></a>
-								<div class="entry-meta">16<span>sep</span></div>
-							</div>
-							<div class="entry-content">
-								<h3><a href="blog-detail.html">Just a Cool Blog Post</a></h3>
-								<p>it is a long established fact that a reader will be Get Free Shipping on 
-									 orders over $75 and free returns to our UK returns centre! </p>
-								<a href="blog-detail.html">Read More</a>
-							</div>
-						</article>
-						
-						<article class="blog-post">
-							<div class="entry-image">
-								<a href="blog-detail.html"><img src="images/blog/2.jpg" alt=""></a>
-								<div class="entry-meta">16<span>sep</span></div>
-							</div>
-							<div class="entry-content">
-								<h3><a href="blog-detail.html">Just a Cool Blog Post</a></h3>
-								<p>it is a long established fact that a reader will be Get Free Shipping on 
-									 orders over $75 and free returns to our UK returns centre! </p>
-								<a href="blog-detail.html">Read More</a>
-							</div>
-						</article>
-						
-						<article class="blog-post">
-							<div class="entry-image">
-								<a href="blog-detail.html"><img src="images/blog/3.jpg" alt=""></a>
-								<div class="entry-meta">16<span>sep</span></div>
-							</div>
-							<div class="entry-content">
-								<h3><a href="blog-detail.html">Just a Cool Blog Post</a></h3>
-								<p>it is a long established fact that a reader will be Get Free Shipping on 
-									 orders over $75 and free returns to our UK returns centre! </p>
-								<a href="blog-detail.html">Read More</a>
-							</div>
-						</article>
-						
-						<article class="blog-post">
-							<div class="entry-image">
-								<a href="blog-detail.html"><img src="images/blog/1.jpg" alt=""></a>
-								<div class="entry-meta">16<span>sep</span></div>
-							</div>
-							<div class="entry-content">
-								<h3><a href="blog-detail.html">Just a Cool Blog Post</a></h3>
-								<p>it is a long established fact that a reader will be Get Free Shipping on 
-									 orders over $75 and free returns to our UK returns centre! </p>
-								<a href="blog-detail.html">Read More</a>
-							</div>
-						</article>
-						
-						<article class="blog-post">
-							<div class="entry-image">
-								<a href="blog-detail.html"><img src="images/blog/2.jpg" alt=""></a>
-								<div class="entry-meta">16<span>sep</span></div>
-							</div>
-							<div class="entry-content">
-								<h3><a href="blog-detail.html">Just a Cool Blog Post</a></h3>
-								<p>it is a long established fact that a reader will be Get Free Shipping on 
-									 orders over $75 and free returns to our UK returns centre! </p>
-								<a href="blog-detail.html">Read More</a>
-							</div>
-						</article>
-						
-						<article class="blog-post">
-							<div class="entry-image">
-								<a href="blog-detail.html"><img src="images/blog/3.jpg" alt=""></a>
-								<div class="entry-meta">16<span>sep</span></div>
-							</div>
-							<div class="entry-content">
-								<h3><a href="blog-detail.html">Just a Cool Blog Post</a></h3>
-								<p>it is a long established fact that a reader will be Get Free Shipping on 
-									 orders over $75 and free returns to our UK returns centre! </p>
-								<a href="blog-detail.html">Read More</a>
-							</div>
-						</article>
-						
-					</div>
-					
-				</section>
+				
 				
 				<!-- Banners
 				============================================= -->
@@ -633,90 +319,7 @@
 			
 			<!-- Footer
 			============================================= -->
-			<footer id="footer" class="footer">
-				
-				<!-- Footer Top
-				============================================= -->
-				
-				<div class="footer-nav-sec clearfix">
-					<div class="container">
-					
-						<div class="row">
-							
-							
-							<!-- About Us Widget
-							============================================= -->
-							<div class="col-md-4">
-								<div class="footer-widget">
-									<h4>About Us</h4>
-									<p>it is a long established fact that a reader will be Get Free Shipping on 
-										all orders over $75 and free returns to our UK returns centre! <br>
-										Nisi porttitor inceptos consectetur donec orci, dui ipsum leo class gravida.</p>
-								</div>
-							</div>
-							
-							
-							<!-- Get in Touch Widget
-							============================================= -->
-							<div class="col-md-4">
-								<div class="footer-widget">
-									<h4>Get in Touch</h4>
-									<p>it is a long established fact that a reader will be Get Free Shipping on 
-										 orders.</p>
-									
-									<!-- Social
-									============================================= -->
-									<ul class="social">
-										<li><a href="#." class="facebook"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#." class="twitter"><i class="icon-twitter4"></i></a></li>
-										<li><a href="#." class="google-plus"><i class="icon-google-plus"></i></a></li>
-										<li><a href="#." class="rss"><i class="icon-rss2"></i></a></li>
-										<li><a href="#." class="vimeo"><i class="icon-vimeo4"></i></a></li>
-									</ul>
-								</div>
-							</div>
-							
-							
-							<!-- Fajar Alerts Widget
-							============================================= -->
-							<div class="col-md-4">
-								<div class="footer-widget">
-									<h4>Fajar Alerts</h4>
-									<p>Register now to get updates on promotions and coupons.</p>
-									<div id="response2" style="display:none;"  class='success-msg'></div>
-									<form class="news-letter-form clearfix" name="email_form" id="email_form" method="post">
-										<input type="text" name="news_email_address" id="news_email_address" placeholder="Email Address" class="validate[required,custom[email]]" data-prompt-position="topLeft:0">
-										<input type="submit" value="" class="news-letter-submit">
-									</form>
-								</div>
-							</div>
-							
-							
-						</div>
-						
-					</div>
-				</div>
-				
-				<div class="footer-cards text-center">
-				
-					<img src="{{URL::asset('templete/images/payment-cards.png')}}" alt="">
-					
-					<!-- Copyrights
-					============================================= -->
-					<p class="copyright">Copyright © 2015 Fajar. 
-						 rights reserved.</p>
-					
-				</div>
-				
-				
-				<!--<div class="footer-bottom clearfix">
-					<div class="container">
-						<img src="{{URL::asset('templete/images/footer-logo.png')}}" alt="">
-						<p>Empresa completament reponsable</p>
-					</div>
-				</div>-->
-				
-			</footer>
+			@include("tienda.footer")
 			
 			
 		</div>

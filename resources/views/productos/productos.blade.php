@@ -7,10 +7,10 @@
                 @include('productos.newProducto')
             </div>            
         @else
-            <div class="col-md-4">
+            <div class="col-md-5">
                 @include('productos.newProducto')            
             </div>
-            <div class="col-md-8">
+            <div class="col-md-7">
                 @include('productos.listado')
             </div>
         @endif        

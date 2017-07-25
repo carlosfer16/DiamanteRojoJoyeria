@@ -93,8 +93,13 @@
                                                                                                     
             <div class="collapse navbar-collapse" id="primary-menu">
                 <ul class="nav navbar-nav">
-                <li><a href="index.html">home</a></li>
-                <li class="dropdown">
+                <li><a href="index.html">Inicio</a></li>
+                @forelse($categorias as $cat)
+                    <li><a href="index.html">{{$cat->cat_nombre}}</a></li>
+                @empty
+                    
+                @endforelse
+                <!--<li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">pages <span class="caret"></span></a>
                     <ul class="dropdown-menu list-icon" role="menu">
                     <li><a href="about-us.html"><i class="fa fa-angle-right"></i> About Us</a></li>
@@ -205,11 +210,11 @@
                     <li><a href="blog-detail.html"><i class="fa fa-angle-right"></i> Blog Detail</a></li>
                     </ul>
                 </li>
-                <li><a href="#">find a store</a></li>
+                <li><a href="#">find a store</a></li>-->
                 </ul>
                 <form class="navbar-form" role="search">
                 <div class="form-group">
-                    <input type="text" placeholder="Search...">
+                    <input type="text" placeholder="Buscar...">
                 </div>
                 <button type="submit"><i class="icon-search4"></i></button>
                 </form>
