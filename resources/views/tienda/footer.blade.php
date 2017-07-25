@@ -12,10 +12,8 @@
                 ============================================= -->
                 <div class="col-md-4">
                     <div class="footer-widget">
-                        <h4>About Us</h4>
-                        <p>it is a long established fact that a reader will be Get Free Shipping on 
-                            all orders over $75 and free returns to our UK returns centre! <br>
-                            Nisi porttitor inceptos consectetur donec orci, dui ipsum leo class gravida.</p>
+                        <h4>Nosotros</h4>
+                        <p>Somos una empresa mexicana dedicada a la joyeria nacional</p>
                     </div>
                 </div>
                 
@@ -24,9 +22,8 @@
                 ============================================= -->
                 <div class="col-md-4">
                     <div class="footer-widget">
-                        <h4>Get in Touch</h4>
-                        <p>it is a long established fact that a reader will be Get Free Shipping on 
-                                orders.</p>
+                        <h4>Nosotros en todos lados</h4>
+                        <p>Siguenos en nuestras redes sociales.</p>
                         
                         <!-- Social
                         ============================================= -->
@@ -45,11 +42,11 @@
                 ============================================= -->
                 <div class="col-md-4">
                     <div class="footer-widget">
-                        <h4>Fajar Alerts</h4>
-                        <p>Register now to get updates on promotions and coupons.</p>
+                        <h4>Registrate a nuestras noticias</h4>
+                        <p>Al registrate te avisaremos cualquier cosa.</p>
                         <div id="response2" style="display:none;"  class='success-msg'></div>
                         <form class="news-letter-form clearfix" name="email_form" id="email_form" method="post">
-                            <input type="text" name="news_email_address" id="news_email_address" placeholder="Email Address" class="validate[required,custom[email]]" data-prompt-position="topLeft:0">
+                            <input type="text" name="news_email_address" id="news_email_address" placeholder="Correo Electronico " class="validate[required,custom[email]]" data-prompt-position="topLeft:0">
                             <input type="submit" value="" class="news-letter-submit">
                         </form>
                     </div>

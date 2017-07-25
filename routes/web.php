@@ -32,10 +32,15 @@ Route::post('categorias/editCat', "CategoriasController@editCat");
 
 //FIN CATEGORIAS
 
+//LOGIN
+Route::get('login', "LoginAdminController@index");
+
+//FIN LOGIN
+
 Route::post('administrador', "LoginAdminController@index");
 
 Route::get('administrador/login' , "LoginAdminController@login" );
 
-Auth::routes();
+//Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');

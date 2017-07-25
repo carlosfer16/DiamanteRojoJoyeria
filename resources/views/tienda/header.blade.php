@@ -33,7 +33,7 @@
                         </div>
                     </li>-->
                     <li class="login-btn">
-                        <a href="login-register.html">
+                        <a href="{{url('login')}}">
                             <i class="icon-locklockerstreamline"></i>Login
                         </a>
                     </li>

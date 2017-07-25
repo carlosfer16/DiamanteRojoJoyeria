@@ -14,10 +14,11 @@ class TiendaController extends Controller
         $newProductos = ProductosModel::where("pro_visible", 1)->get();
         $productos = ProductosModel::where("pro_visible", 1)->limit(4)->get();
 
-        return view("tienda.tienda",[
+        return view("tienda.home",[
                                         "categorias" => $categorias,
                                         "productos" => $productos,
-                                        "newProductos" => $newProductos
+                                        "newProductos" => $newProductos,
+                                        "slider" => true
                                     
                                     ]);
     }
