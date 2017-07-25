@@ -62,6 +62,7 @@ class Productos extends Controller
         }
 
         $prod->pro_nombre = $datos->input('name');
+        $prod->pro_desc = $datos->input('desc');
         $prod->pro_costo = $datos->input('costo');
         $prod->cat_id = $datos->input("cat");
         $prod->save();

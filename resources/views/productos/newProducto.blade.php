@@ -35,6 +35,16 @@
                 </div>
             </div>
             <div class="form-group">
+                <label for="" class="control-label col-md-2">Descripcion</label>
+                <div class="col-md-10">
+                    @if($id!=0)
+                        <input type="text" class="form-control" name="desc" value="{{$oneProd->pro_desc}}" placeholder="Descripcion">
+                    @else
+                        <input type="text" class="form-control" name="desc" value="" placeholder="Nombre">
+                    @endif                    
+                </div>
+            </div>
+            <div class="form-group">
                 <label for="" class="control-label col-md-2">Costo</label>
                 <div class="col-md-10">
                     @if($id!=0)

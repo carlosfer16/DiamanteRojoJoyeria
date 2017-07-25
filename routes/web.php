@@ -10,9 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function(){
-    return view('tienda.tienda');
-});
+Route::get('/', 'TiendaController@index');
 
 //PRODUCTOS
 Route::get('administrador/productos', 'Productos@getProductos');

@@ -21,6 +21,7 @@
                     <th>ID</th>
                     <th>Nombre</th>
                     <th>Costo</th>
+                    <th>Descripcion</th>
                     <th>Opciones</th>
                 </tr>
             </thead>
@@ -30,6 +31,7 @@
                         <td>{{$pro->pro_id}}</td>
                         <td>{{$pro->pro_nombre}}</td>
                         <td>{{$pro->pro_costo}}</td>
+                        <td>{{$pro->pro_desc}}</td>
                         <td style="display: inline-flex;">
                             <form action="{{url('productos/deleteProd')}}" method="POST" style="margin-right:5px;">
                                 {{ csrf_field() }}
@@ -49,7 +51,7 @@
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="4">
+                        <td colspan="5">
                             <center>Sin Productos</center>
                         </td>
                     </tr>
