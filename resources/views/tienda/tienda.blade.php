@@ -234,7 +234,7 @@
 	============================================= -->
 	<script src="{{URL::asset('templete/js/scripts.js')}}"></script>
 
-	
+	@yield('scripts')
 	<script>
 
 	(function () {

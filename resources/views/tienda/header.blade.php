@@ -9,7 +9,7 @@
                     <!--<li><a href="about-us.html">About Us</a></li>
                     <li><a href="contact-us.html">Contact Us</a></li>-->
                     @if(Session::get("id"))
-                        <li><a href="#.">My Account</a></li>
+                        <li><a href="#.">Mi Cuenta</a></li>
                         <li class="login-btn">
                             <a href="{{url('login/cerrar')}}">
                                 <i class="icon-locklockerstreamline"></i>Cerrar Sesion
@@ -36,18 +36,19 @@
             
             <div class="shop-cart clearfix">
                 <a href="#." class="cart-control"><i class="icon-caddieshopshoppingstreamline"></i><span>0</span></a>
-                <div class="shop-cart-detail">
-                    <div class="shop-cart-item clearfix">
+                <div class="shop-cart-detail" >
+                    <div id="detallesCarrito"></div>
+                    <!--<div class="shop-cart-item clearfix">
                         <img src="{{URL::asset('templete/images/cart-item.jpg')}}" alt="">
                         <p>Leather Hand Gloves for Men<span>Quantity 3</span></p>
-                    </div>
+                    </div>-->
                     <div class="shop-cart-total clearfix">
                         SUBTOTAL
-                        <span>$155.00</span>
+                        <span>$0</span>
                     </div>
                     <div class="shop-cart-buttons clearfix">
-                        <a href="#." class="view-cart">view cart</a>
-                        <a href="#." class="check-out">checkout</a>
+                        <a href="#." class="view-cart">Ver Carrito</a>
+                        <a href="#." class="check-out">Pagar</a>
                     </div>
                 </div>
             </div>
@@ -79,11 +80,9 @@
             <div class="collapse navbar-collapse" id="primary-menu">
                 <ul class="nav navbar-nav">
                 <li><a href="{{url('')}}">Inicio</a></li>
-                @forelse($categorias as $cat)
+                @foreach($categorias as $cat)
                     <li><a href="{{url('productos?cat=').$cat->cat_id}}">{{$cat->cat_nombre}}</a></li>
-                @empty
-                    
-                @endforelse
+                @endforeach
                 <!--<li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">pages <span class="caret"></span></a>
                     <ul class="dropdown-menu list-icon" role="menu">

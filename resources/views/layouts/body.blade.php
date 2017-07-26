@@ -86,15 +86,16 @@
                                 <a href="{{URL::to('administrador')}}"><i class="md md-dashboard"></i>Inicio</a>
                             </li>
 
-                            <li class="has-submenu">
-                                <a href="#"><i class="md md-dashboard"></i>Catalagos</a>
-                                <ul class="submenu">
-                                    <li><a href="ui-buttons.html">Usuarios</a></li>
-                                    <li><a href="{{url('administrador/categorias')}}">Categorias</a></li>
-                                    <li><a href="{{url('administrador/productos')}}">Productos</a></li>
-                                    <li><a href="{{url('administrador/clientes')}}">Clientes</a></li>
-                                </ul>
-                            </li>
+                            @if(Session::get('tipo')=="1")
+                                <li class="has-submenu">
+                                    <a href="#"><i class="md md-dashboard"></i>Catalagos</a>
+                                    <ul class="submenu">
+                                        <li><a href="{{url('administrador/categorias')}}">Categorias</a></li>
+                                        <li><a href="{{url('administrador/productos')}}">Productos</a></li>
+                                        <li><a href="{{url('administrador/clientes')}}">Clientes</a></li>
+                                    </ul>
+                                </li>
+                            @endif
                             <li class="has-submenu">
                                 <a href="{{URL::to('/')}}"><i class="md md-dashboard"></i>Tienda</a>
                             </li>

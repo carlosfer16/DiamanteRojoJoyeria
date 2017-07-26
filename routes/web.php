@@ -49,6 +49,9 @@ Route::get('administrador/clientes', "UsuariosController@index");
 Route::post('clientes/deleteCliente', "UsuariosController@deleteClie");
 Route::post('clientes/addCliente', "UsuariosController@addCliente");
 
+//CARRITO
+Route::post('carrito/getCarrito', "CarritoController@getCarrito");
+Route::post('carrito/addProdCarrito', "CarritoController@addCarrito");
 
 //Auth::routes();
 

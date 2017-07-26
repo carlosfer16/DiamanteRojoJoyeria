@@ -31,6 +31,8 @@ class LoginAdminController extends Controller
             $req->session()->put("domicilio" , $cliente[0]->cli_domicilio );
             $req->session()->put("correo" , $cliente[0]->cli_correo );
             $req->session()->put("perfil" , $cliente[0]->cli_perfil );
+            $req->session()->put("tipo" , $cliente[0]->cli_tipo );
+
 
             return redirect("administrador");
         }else{
