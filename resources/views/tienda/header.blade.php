@@ -95,7 +95,7 @@
                 <ul class="nav navbar-nav">
                 <li><a href="index.html">Inicio</a></li>
                 @forelse($categorias as $cat)
-                    <li><a href="index.html">{{$cat->cat_nombre}}</a></li>
+                    <li><a href="{{url('productos?cat=').$cat->cat_id}}">{{$cat->cat_nombre}}</a></li>
                 @empty
                     
                 @endforelse

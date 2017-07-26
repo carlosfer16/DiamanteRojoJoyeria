@@ -4,7 +4,7 @@
 <div class="sub-page-padding clearfix">				
     <div class="login-register-tabs" id="login-register-tabs">
         <ul class="resp-tabs-list clearfix">
-            <li><a href="#.">Inciar</a></li>
+            <li><a href="#.">Iniciar</a></li>
             <li><a href="#.">Registrar</a></li>
         </ul>
         <div class="resp-tabs-container">
@@ -28,19 +28,19 @@
                     <form name="" id="register_form" action="login/registrar" method="POST">
                         {{ csrf_field() }}
                         <label>Nombre *</label>
-                        <input type="text" id="register_form_name" name="name" class="validate[required]" data-prompt-position="topLeft:0">
+                        <input type="text"  name="name"  required data-prompt-position="topLeft:0">
                         
                         <label>Apellido *</label>
-                        <input type="text" id="register_form_name" name="last" class="validate[required]" data-prompt-position="topLeft:0">
+                        <input type="text"  name="last"  required data-prompt-position="topLeft:0">
                         
                         <label>Domicilio *</label>
-                        <input type="text" id="register_form_email" name="dom" class="validate[required,custom[email]]" data-prompt-position="topLeft:0">
+                        <input type="text"  name="dom" required  data-prompt-position="topLeft:0">
                         
                         <label>Correo Electronico *</label>
-                        <input type="email" id="register_form_email" name="mail" class="validate[required,custom[email]]" data-prompt-position="topLeft:0">
+                        <input type="email" style="margin-bottom:30px; width:100%;" name="mail"  required data-prompt-position="topLeft:0">
                         
                         <label>Contraseña *</label>
-                        <input type="password" id="register_form_password" name="pass" class="validate[required]" data-prompt-position="topLeft:0">
+                        <input type="password" name="pass"  required data-prompt-position="topLeft:0">
                         
                         <input type="submit" class="btn btn default btn-fill" value="Registrar">
                         <div class="clearfix"></div>

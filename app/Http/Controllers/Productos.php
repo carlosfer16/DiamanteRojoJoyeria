@@ -12,6 +12,10 @@ class Productos extends Controller
 {
     public function getProductos(Request $req){
 
+        if (!$req->session()->exists('id')) {
+            return redirect("/");
+        }
+
         $id = $req->input("id")==""?0:$req->input("id");
         
         $cat = $req->input("cat")==""?0:$req->input("cat");
@@ -42,7 +46,8 @@ class Productos extends Controller
                                             "productos" => $productos,
                                             "catSelect" => $cat,
                                             "id" => $id,
-                                            "oneProd" => $oneProd                                            
+                                            "oneProd" => $oneProd,
+                                            "nombreSesion" => $req->session()->get("nombre")
                                             ]);
     } 
 
@@ -80,6 +85,21 @@ class Productos extends Controller
 
         return redirect()->action("Productos@getProductos");
 
+    }
+
+    function tiendaProductosByCat(Request $req){
+        $categorias = CategoriasModel::where('cat_visible', 1)->get();
+
+        $query = DB::table('productos as p')->select("p.*")
+                                            ->join("categorias as c","c.cat_id", "=", "p.cat_id")
+                                            ->where("p.cat_id", $req->input("cat"));
+
+        $productos = $query->get();
+
+        return view("tienda.productos", [
+                                            "categorias" => $categorias,
+                                            "productos" => $productos
+                                        ]);
     }
 }
 

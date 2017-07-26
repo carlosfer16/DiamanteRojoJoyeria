@@ -36,12 +36,11 @@ Route::post('categorias/editCat', "CategoriasController@editCat");
 Route::get('login', "LoginAdminController@index");
 Route::post('login/login', "LoginAdminController@login");
 Route::post('login/registrar', "LoginAdminController@registrar");
+Route::get('login/cerrar', "LoginAdminController@logout");
 
 //FIN LOGIN
+Route::get('productos', "Productos@tiendaProductosByCat");
 
-Route::post('administrador', "LoginAdminController@index");
-
-Route::get('administrador/login' , "LoginAdminController@login" );
 
 //Auth::routes();
 
