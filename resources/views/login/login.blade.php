@@ -10,11 +10,12 @@
         <div class="resp-tabs-container">
             <div>
                 <div class="login-register-form">
-                    <form name="login_form" id="login_form">
+                    <form name="login_form" id="login_form" action="login/login" method="POST">
+                        {{ csrf_field() }}
                         <label>Correo Electronico *</label>
-                        <input type="text" id="name" name="name" class="validate[required]" data-prompt-position="topLeft:0">
+                        <input type="text" id="name" name="mail" class="validate[required]" data-prompt-position="topLeft:0">
                         <label>Contraseña *</label>
-                        <input type="password" id="password" name="password" class="validate[required]" data-prompt-position="topLeft:0">
+                        <input type="password" id="password" name="pass" class="validate[required]" data-prompt-position="topLeft:0">
                         <input type="submit" class="btn btn default btn-fill" value="Ingresar">
                         <div class="clearfix"></div>
                     </form>
@@ -24,16 +25,24 @@
             
             <div>
                 <div class="login-register-form">
-                    <form name="register_form" id="register_form">
-                        <label>Username *</label>
-                        <input type="text" id="register_form_name" name="register_form_name" class="validate[required]" data-prompt-position="topLeft:0">
-                        <label>Email Address *</label>
-                        <input type="text" id="register_form_email" name="register_form_email" class="validate[required,custom[email]]" data-prompt-position="topLeft:0">
-                        <label>Password *</label>
-                        <input type="password" id="register_form_password" name="register_form_password" class="validate[required]" data-prompt-position="topLeft:0">
-                        <label>Confirm Password *</label>
-                        <input type="password" id="confirm_register_form_password" name="confirm_register_form_password" class="validate[required,equals[register_form_password]]" data-prompt-position="topLeft:0">
-                        <input type="submit" class="btn btn default btn-fill" value="Register">
+                    <form name="" id="register_form" action="login/registrar" method="POST">
+                        {{ csrf_field() }}
+                        <label>Nombre *</label>
+                        <input type="text" id="register_form_name" name="name" class="validate[required]" data-prompt-position="topLeft:0">
+                        
+                        <label>Apellido *</label>
+                        <input type="text" id="register_form_name" name="last" class="validate[required]" data-prompt-position="topLeft:0">
+                        
+                        <label>Domicilio *</label>
+                        <input type="text" id="register_form_email" name="dom" class="validate[required,custom[email]]" data-prompt-position="topLeft:0">
+                        
+                        <label>Correo Electronico *</label>
+                        <input type="email" id="register_form_email" name="mail" class="validate[required,custom[email]]" data-prompt-position="topLeft:0">
+                        
+                        <label>Contraseña *</label>
+                        <input type="password" id="register_form_password" name="pass" class="validate[required]" data-prompt-position="topLeft:0">
+                        
+                        <input type="submit" class="btn btn default btn-fill" value="Registrar">
                         <div class="clearfix"></div>
                     </form>
 

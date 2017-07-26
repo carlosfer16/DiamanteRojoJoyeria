@@ -34,6 +34,8 @@ Route::post('categorias/editCat', "CategoriasController@editCat");
 
 //LOGIN
 Route::get('login', "LoginAdminController@index");
+Route::post('login/login', "LoginAdminController@login");
+Route::post('login/registrar', "LoginAdminController@registrar");
 
 //FIN LOGIN
 
