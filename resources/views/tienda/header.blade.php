@@ -8,35 +8,20 @@
                 <ul class="clearfix">
                     <!--<li><a href="about-us.html">About Us</a></li>
                     <li><a href="contact-us.html">Contact Us</a></li>-->
-                    @isset($session)
+                    @if(Session::get("id"))
                         <li><a href="#.">My Account</a></li>
-                    @endisset
-                    <!--<li>
-                        <div id="polyglotLanguageSwitcher">
-                            <form action="#">
-                                <select id="polyglot-language-options">
-                                    <option id="en" value="en" selected>English</option>
-                                    <option id="fr" value="fr">Fran&ccedil;ais</option>
-                                    <option id="de" value="de">Deutsch</option>
-                                    <option id="it" value="it">Italiano</option>
-                                    <option id="es" value="es">Espa&ntilde;ol</option>
-                                </select>
-                            </form>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="currency-select">
-                            <select>
-                                <option>Currency</option>
-                                <option>Us Dollor</option>
-                            </select>
-                        </div>
-                    </li>-->
-                    <li class="login-btn">
-                        <a href="{{url('login')}}">
-                            <i class="icon-locklockerstreamline"></i>Login
-                        </a>
-                    </li>
+                        <li class="login-btn">
+                            <a href="{{url('login/cerrar')}}">
+                                <i class="icon-locklockerstreamline"></i>Cerrar Sesion
+                            </a>
+                        </li>
+                    @else
+                        <li class="login-btn">
+                            <a href="{{url('login')}}">
+                                <i class="icon-locklockerstreamline"></i>Login
+                            </a>
+                        </li>
+                    @endif
                 </ul>
             </div>
         </div>
@@ -93,7 +78,7 @@
                                                                                                     
             <div class="collapse navbar-collapse" id="primary-menu">
                 <ul class="nav navbar-nav">
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="{{url('')}}">Inicio</a></li>
                 @forelse($categorias as $cat)
                     <li><a href="{{url('productos?cat=').$cat->cat_id}}">{{$cat->cat_nombre}}</a></li>
                 @empty

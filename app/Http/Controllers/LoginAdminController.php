@@ -8,6 +8,7 @@ use App\LoginAdminModel as users;
 use App\CategoriasModel;
 use App\ProductosModel;
 use App\UsuariosModel;
+use Session;
 
 class LoginAdminController extends Controller
 {
@@ -33,7 +34,12 @@ class LoginAdminController extends Controller
 
             return redirect("administrador");
         }else{
-            echo "error";
+            $alerta = [   "tipo" => "danger",
+                        "msj" => "Usuario y/o contraseña incorrecta"
+                    ];
+            Session::flash("alerta", $alerta['msj']);
+            Session::flash("tipo", $alerta['tipo']);
+            return redirect("login");
         }
         
     }

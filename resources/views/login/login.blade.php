@@ -12,6 +12,12 @@
                 <div class="login-register-form">
                     <form name="login_form" id="login_form" action="login/login" method="POST">
                         {{ csrf_field() }}
+                        @if(Session::has('alerta'))
+                            <div class="alert alert-{{Session::get('tipo')}} alert-dismissable">
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+                                {{Session::get('alerta')}}
+                            </div>
+                        @endif
                         <label>Correo Electronico *</label>
                         <input type="text" id="name" name="mail" class="validate[required]" data-prompt-position="topLeft:0">
                         <label>Contraseña *</label>

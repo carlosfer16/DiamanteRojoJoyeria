@@ -41,6 +41,14 @@ Route::get('login/cerrar', "LoginAdminController@logout");
 //FIN LOGIN
 Route::get('productos', "Productos@tiendaProductosByCat");
 
+//REPORTES
+Route::get('administrador', "UsuariosController@reportes");
+
+//CLIENTES
+Route::get('administrador/clientes', "UsuariosController@index");
+Route::post('clientes/deleteCliente', "UsuariosController@deleteClie");
+Route::post('clientes/addCliente', "UsuariosController@addCliente");
+
 
 //Auth::routes();
 

@@ -96,9 +96,18 @@ class Productos extends Controller
 
         $productos = $query->get();
 
+
+        foreach($categorias as $cat){
+            if($cat->cat_id==$req->input("cat")){
+                $nombreCat = $cat->cat_nombre;
+                break;
+            }
+        }
+
         return view("tienda.productos", [
                                             "categorias" => $categorias,
-                                            "productos" => $productos
+                                            "productos" => $productos,
+                                            "nombreCat" => $nombreCat
                                         ]);
     }
 }

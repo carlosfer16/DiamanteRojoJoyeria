@@ -39,7 +39,7 @@
 
                     <!-- Logo container-->
                     <div class="logo">
-                        <a href="/" class="logo"><i class="md md-equalizer"></i> <span>Joyeria Luna</span> </a>
+                        <a href="/" class="logo"><i class="fa fa-diamond" style="color:red;" aria-hidden="true"></i> <span>Joyeria Diamante Rojo</span> </a>
                     </div>
                     <!-- End Logo container-->
 
@@ -49,13 +49,11 @@
 
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle waves-effect waves-light profile" data-toggle="dropdown" aria-expanded="true">
-                                    {{ $nombreSesion }}
+                                    {{ Session::get('nombre')." ".Session::get('apellido') }}
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="javascript:void(0)"><i class="ti-user m-r-5"></i> Profile</a></li>
-                                    <li><a href="javascript:void(0)"><i class="ti-settings m-r-5"></i> Settings</a></li>
-                                    <li><a href="javascript:void(0)"><i class="ti-lock m-r-5"></i> Lock screen</a></li>
-                                    <li><a href="{{url('login/cerrar')}}"><i class="ti-power-off m-r-5"></i> Logout</a></li>
+                                    <li><a href="javascript:void(0)"><i class="ti-user m-r-5"></i> Perfil</a></li>
+                                    <li><a href="{{url('login/cerrar')}}"><i class="ti-power-off m-r-5"></i> Cerrar Sesion</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -85,7 +83,7 @@
                         <!-- Navigation Menu-->
                         <ul class="navigation-menu">
                             <li class="has-submenu">
-                                <a href="{{URL::to('/')}}"><i class="md md-dashboard"></i>Inicio</a>
+                                <a href="{{URL::to('administrador')}}"><i class="md md-dashboard"></i>Inicio</a>
                             </li>
 
                             <li class="has-submenu">
@@ -94,7 +92,11 @@
                                     <li><a href="ui-buttons.html">Usuarios</a></li>
                                     <li><a href="{{url('administrador/categorias')}}">Categorias</a></li>
                                     <li><a href="{{url('administrador/productos')}}">Productos</a></li>
+                                    <li><a href="{{url('administrador/clientes')}}">Clientes</a></li>
                                 </ul>
+                            </li>
+                            <li class="has-submenu">
+                                <a href="{{URL::to('/')}}"><i class="md md-dashboard"></i>Tienda</a>
                             </li>
 
                         </ul>
@@ -126,7 +128,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-xs-12">
-                                2016 © Minton.
+                                Instituto Tecnologico De Culiacan - 2017
                             </div>
                         </div>
                     </div>
