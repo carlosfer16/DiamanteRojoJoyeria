@@ -6,7 +6,7 @@
         <br>        
         <div class="row">
             <div class="col-md-5">
-                <img src="{{$producto->pro_imagen!='noimage'?url('storage/'.$producto->pro_imagen):url('templete/images/the-founders-img.jpg')}}" alt="">
+                <img src="{{url('templete/images/the-founders-img.jpg')}}" alt="">
             </div>
             <div class="col-md-7">
                 <p>{{$producto->pro_desc}}</p>
@@ -49,10 +49,8 @@
         
             <h2>Comentar</h2>
             
-            <form action="{{url('comentarios/comentar')}}" method="POST">
-                {{ csrf_field() }}
-                <input type="hidden" name="id" value="{{$producto->pro_id}}">
-                <textarea name="comentario" placeholder="Escriba su comentario" ></textarea>
+            <form action="comentarios/comentar">
+                <textarea placeholder="Escriba su comentario" ></textarea>
                 <input type="submit" class="btn btn default btn-fill" value="Publicar">
             </form>
             

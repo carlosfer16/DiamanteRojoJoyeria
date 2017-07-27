@@ -99,6 +99,9 @@
                             <li class="has-submenu">
                                 <a href="{{URL::to('/')}}"><i class="md md-dashboard"></i>Tienda</a>
                             </li>
+                            <li class="has-submenu">
+                                <a href="{{URL::to('administrador/favoritos')}}"><i class="md md-dashboard"></i>Favoritos</a>
+                            </li>
 
                         </ul>
                         <!-- End navigation menu -->

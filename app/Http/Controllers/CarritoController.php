@@ -46,4 +46,14 @@ class CarritoController extends Controller
 
         return response()->json($carrito);
     }
+
+    function addFavorito(Request $req){
+        $proId = $req->input('id');
+
+        DB::table('favoritos')->insert(
+            ['pro_id' => $proId, 'cli_id' => $req->session()->get("id")]
+        );
+
+        return response()->json(true);
+    }
 }

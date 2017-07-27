@@ -291,6 +291,27 @@
             });
         }
 
+		var agregarFavorito = function(id){
+            var formdata = new FormData();
+            formdata.append("_token", "{{ csrf_token() }}");
+            formdata.append("id", id);
+            $.ajax({
+                url: '{{url("carrito/addFavorito")}}',
+                type: "POST",
+                dataType: "JSON",
+                data: formdata,
+                processData: false,
+                contentType: false,
+                cache : false,
+                success: function(data) {
+                    alert("FAVORITO AGREGADO");                                
+                },
+                error: function() {
+                    console.log('error');
+                }
+            });
+        }
+
         var pintarCarrito = function(){
             var html = arrayCarrito['productos'].map(function(c,index){
                 return (`<div class="shop-cart-item clearfix" style="padding-top: 15px;">

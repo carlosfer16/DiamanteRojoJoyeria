@@ -9,7 +9,7 @@
                     <!--<li><a href="about-us.html">About Us</a></li>
                     <li><a href="contact-us.html">Contact Us</a></li>-->
                     @if(Session::get("id"))
-                        <li><a href="{{url('administrador/perfil')}}">Mi Cuenta</a></li>
+                        <li><a href="{{url('administrador')}}">Mi Cuenta</a></li>
                         <li class="login-btn">
                             <a href="{{url('login/cerrar')}}">
                                 <i class="icon-locklockerstreamline"></i>Cerrar Sesion
@@ -199,11 +199,12 @@
                 </li>
                 <li><a href="#">find a store</a></li>-->
                 </ul>
-                <form class="navbar-form" role="search">
-                <div class="form-group">
-                    <input type="text" placeholder="Buscar...">
-                </div>
-                <button type="submit"><i class="icon-search4"></i></button>
+                <form class="navbar-form" role="search" action="{{url('productos/busqueda')}}" method="POST">
+                    {{ csrf_field() }}
+                    <div class="form-group">
+                        <input name="keys" type="text" placeholder="Buscar...">
+                    </div>
+                    <button type="submit"><i class="icon-search4"></i></button>
                 </form>
             </div>
             </div>

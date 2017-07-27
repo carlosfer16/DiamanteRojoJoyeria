@@ -101,4 +101,28 @@ class UsuariosController extends Controller
                                         "cambioPerfil" => true
                                     ]);
     }
+
+    function favoritos(Request $req){
+        $id = $req->session()->get("id");
+
+        $favoritos = DB::table("favoritos as f")
+                    ->select("p.pro_id" , "p.pro_nombre")
+                    ->join("productos as p","p.pro_id","=","f.pro_id")
+                    ->where("f.cli_id",$id)
+                    ->where("f.fav_estatus",1)
+                    ->get();
+
+        return view("admin.favoritos",["favoritos" => $favoritos]);        
+    }
+
+    function deleteFav(Request $req){
+        $id = $req->session()->get("id");
+
+       DB::table("favoritos")
+                    ->where("pro_id" , $req->input("id"))
+                    ->where("cli_id" , $id)
+                    ->update(["fav_estatus" => 0]);
+
+        return redirect()->action("UsuariosController@favoritos");        
+    }
 }

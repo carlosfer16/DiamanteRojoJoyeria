@@ -40,10 +40,14 @@ Route::get('login/cerrar', "LoginAdminController@logout");
 
 //FIN LOGIN
 Route::get('productos', "Productos@tiendaProductosByCat");
+Route::get('productosdetalles', "Productos@tiendaProductosById");
+Route::post('productos/busqueda', "Productos@buscador");
+
 
 //REPORTES
 Route::get('administrador', "UsuariosController@reportes");
-
+Route::get('administrador/favoritos', "UsuariosController@favoritos");
+Route::post('administrador/deleteFav', "UsuariosController@deleteFav");
 //CLIENTES
 Route::get('administrador/clientes', "UsuariosController@index");
 Route::get('administrador/perfil', "UsuariosController@index");
@@ -54,7 +58,7 @@ Route::get('clientes/perfil', "UsuariosController@perfil");
 //CARRITO
 Route::post('carrito/getCarrito', "CarritoController@getCarrito");
 Route::post('carrito/addProdCarrito', "CarritoController@addCarrito");
-
+Route::post('carrito/addFavorito', "CarritoController@addFavorito");
 //Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');

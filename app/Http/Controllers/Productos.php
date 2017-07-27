@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use App\CategoriasModel;
 use App\ProductosModel;
+use App\ComentariosModel;
 
 class Productos extends Controller
 {
@@ -109,6 +110,42 @@ class Productos extends Controller
                                             "productos" => $productos,
                                             "nombreCat" => $nombreCat
                                         ]);
+    }
+
+    function buscador(Request $req){
+        $keys = $req->input('keys');
+
+        $categorias = CategoriasModel::where('cat_visible', 1)->get();
+        
+        $productos = ProductosModel::where("pro_visible", 1)
+                                    ->where("pro_nombre", "like", "%".$keys."%")
+                                    ->get();
+
+        return view("tienda.productos", [
+                                            "categorias" => $categorias,
+                                            "productos" => $productos,
+                                            "nombreCat" => "BUSCADOR"
+                                        ]);
+    }
+
+    function tiendaProductosById(Request $req){
+        $id = $req -> input("id");
+
+        if($id==""){
+            return redirect("/");
+        }
+
+        $categorias = CategoriasModel::where('cat_visible', 1)->get();
+
+        $producto = ProductosModel::find($id);
+
+        $comentarios = ComentariosModel::where("com_estatus",1)->get();
+
+        return view("productos.productosdetalles",  [
+                                                        "categorias" => $categorias,
+                                                        "producto" => $producto,
+                                                        "comentarios" => $comentarios
+                                                    ]);
     }
 }
 

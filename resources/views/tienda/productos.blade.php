@@ -20,8 +20,8 @@
                         <span class="double-border"></span>
                         @if(Session::has('id'))
                             <a href="#." onclick="agregarCarrito({{$pro->pro_id}})" class="product-cart-btn pull-left"><i class="icon-icons240"></i> Agregar Al Carrito</a>
-                        @endif
-                        <!--<a href="#." class="product-detail-btn pull-right"><i class="icon-list3"></i> Details</a>-->
+                            <a href="#." onclick="agregarFavorito({{$pro->pro_id}})" class="product-detail-btn pull-right"><i class="fa fa-heart" aria-hidden="true" style="color:red"></i> </a>
+                        @endif                        
                     </div>
                 </div>
             </li>
