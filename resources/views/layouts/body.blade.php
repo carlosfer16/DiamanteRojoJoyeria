@@ -52,7 +52,7 @@
                                     {{ Session::get('nombre')." ".Session::get('apellido') }}
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="javascript:void(0)"><i class="ti-user m-r-5"></i> Perfil</a></li>
+                                    <li><a href="{{url('clientes/perfil')}}"><i class="ti-user m-r-5"></i> Perfil</a></li>
                                     <li><a href="{{url('login/cerrar')}}"><i class="ti-power-off m-r-5"></i> Cerrar Sesion</a></li>
                                 </ul>
                             </li>

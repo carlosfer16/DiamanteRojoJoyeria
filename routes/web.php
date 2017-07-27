@@ -46,8 +46,10 @@ Route::get('administrador', "UsuariosController@reportes");
 
 //CLIENTES
 Route::get('administrador/clientes', "UsuariosController@index");
+Route::get('administrador/perfil', "UsuariosController@index");
 Route::post('clientes/deleteCliente', "UsuariosController@deleteClie");
 Route::post('clientes/addCliente', "UsuariosController@addCliente");
+Route::get('clientes/perfil', "UsuariosController@perfil");
 
 //CARRITO
 Route::post('carrito/getCarrito', "CarritoController@getCarrito");

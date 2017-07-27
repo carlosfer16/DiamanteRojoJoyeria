@@ -1,6 +1,8 @@
 <div class="panel panel-color panel-inverse">
     <div class="panel-heading">
-        @if($id!=0)
+        @if(isset($cambioPerfil))
+            <h3 class="panel-title">Perfil</h3>            
+        @elseif($id!=0)
             <h3 class="panel-title">Editar Cliente</h3>
         @else
             <h3 class="panel-title">Agregar Cliente</h3>
@@ -50,11 +52,11 @@
                     @endif                    
                 </div>
             </div>
-            @if($id==0)
+            @if($id==0 || isset($cambioPerfil))
                 <div class="form-group">
                     <label for="" class="control-label col-md-2">Contraseña</label>
                     <div class="col-md-10">
-                        @if($id!=0)
+                        @if($id!=0 )
                             <input type="password" step="0.01" name="pass" value="{{$oneCli->cli_pass}}" class="form-control" placeholder="****">
                         @else
                             <input type="password" step="0.01" name="pass" class="form-control" placeholder="****">

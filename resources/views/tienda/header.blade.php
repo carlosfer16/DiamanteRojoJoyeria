@@ -9,7 +9,7 @@
                     <!--<li><a href="about-us.html">About Us</a></li>
                     <li><a href="contact-us.html">Contact Us</a></li>-->
                     @if(Session::get("id"))
-                        <li><a href="#.">Mi Cuenta</a></li>
+                        <li><a href="{{url('administrador/perfil')}}">Mi Cuenta</a></li>
                         <li class="login-btn">
                             <a href="{{url('login/cerrar')}}">
                                 <i class="icon-locklockerstreamline"></i>Cerrar Sesion
@@ -34,24 +34,27 @@
             <a href="index.html" class="navbar-brand">
                 <img src="{{URL::asset('templete/images/logo.png')}}" alt="" title=""></a>
             
-            <div class="shop-cart clearfix">
-                <a href="#." class="cart-control"><i class="icon-caddieshopshoppingstreamline"></i><span>0</span></a>
-                <div class="shop-cart-detail" >
-                    <div id="detallesCarrito"></div>
-                    <!--<div class="shop-cart-item clearfix">
-                        <img src="{{URL::asset('templete/images/cart-item.jpg')}}" alt="">
-                        <p>Leather Hand Gloves for Men<span>Quantity 3</span></p>
-                    </div>-->
-                    <div class="shop-cart-total clearfix">
-                        SUBTOTAL
-                        <span>$0</span>
-                    </div>
-                    <div class="shop-cart-buttons clearfix">
-                        <a href="#." class="view-cart">Ver Carrito</a>
-                        <a href="#." class="check-out">Pagar</a>
+            
+            @if(Session::has("id"))
+                <div class="shop-cart clearfix">
+                    <a href="#." class="cart-control"><i class="icon-caddieshopshoppingstreamline"></i><span id="carritoProductos">0</span></a>
+                    <div class="shop-cart-detail" >
+                        <div id="detallesCarrito"></div>
+                        <!--<div class="shop-cart-item clearfix">
+                            <img src="{{URL::asset('templete/images/cart-item.jpg')}}" alt="">
+                            <p>Leather Hand Gloves for Men<span>Quantity 3</span></p>
+                        </div>-->
+                        <div class="shop-cart-total clearfix">
+                            SUBTOTAL
+                            <span id="carritoSubtotal">$0</span>
+                        </div>
+                        <div class="shop-cart-buttons clearfix">
+                            <a href="#." class="view-cart">Ver Carrito</a>
+                            <a href="#." class="check-out">Pagar</a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            @endif
             
             <ul class="header-banners">
                 <li>

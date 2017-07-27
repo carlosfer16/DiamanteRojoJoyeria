@@ -236,6 +236,78 @@
 
 	@yield('scripts')
 	<script>
+         $(document).ready(function(e){
+            getCarrito();
+         });
+
+        var arrayCarrito = [];
+
+        var agregarCarrito = function(id){
+            var formdata = new FormData();
+            formdata.append("_token", "{{ csrf_token() }}");
+            formdata.append("id", id);
+            $.ajax({
+                url: '{{url("carrito/addProdCarrito")}}',
+                type: "POST",
+                dataType: "JSON",
+                data: formdata,
+                processData: false,
+                contentType: false,
+                cache : false,
+                success: function(data) {
+                    getCarrito();                                
+                },
+                error: function() {
+                    console.log('error');
+                }
+            });
+        }
+
+        var getCarrito = function(){
+            var formdata = new FormData();
+            formdata.append("_token", "{{ csrf_token() }}");
+            $.ajax({
+                url: '{{url("carrito/getCarrito")}}',
+                type: "POST",
+                data:formdata,
+                dataType: "JSON",
+                processData: false,
+                contentType: false,
+                cache : false,
+                success: function(data) {
+
+                    arrayCarrito = data;
+
+                    /*data.map(function(c,index){
+                        arrayCarrito.push(c);
+                    });*/
+
+                    pintarCarrito();
+                    
+                },
+                error: function() {
+                    console.log('error');
+                }
+            });
+        }
+
+        var pintarCarrito = function(){
+            var html = arrayCarrito['productos'].map(function(c,index){
+                return (`<div class="shop-cart-item clearfix" style="padding-top: 15px;">
+                            <img src="{{URL::asset('templete/images/cart-item.jpg')}}" alt="">
+                            <p>${c.pro_nombre}<span>Cantidad ${c.cantidad}</span></p>
+                        </div>`)
+            });
+
+            $('#carritoProductos').html(arrayCarrito['contador']);
+            $('#carritoSubtotal').html("$"+arrayCarrito['subtotal']);
+
+            $('#detallesCarrito').html(html);
+        }
+
+
+    </script>
+	<script>
 
 	(function () {
 		"use strict";

@@ -5,13 +5,27 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\CarritoModel;
+use Illuminate\Support\Facades\DB;
 
 class CarritoController extends Controller
 {
     function getCarrito(Request $req){
         $idSesion = $req->session()->get("id");
-        $carrito = CarritoModel::where("cli_id" , $idSesion)
-                                ->where("car_estado", 0)->get();
+        $productos = DB::table("vw_carrito")->where("cli_id", $idSesion)->get();
+
+        $subtotal = 0;
+        $contador = 0;
+
+        foreach($productos as $p){
+            $subtotal += floatval($p->total);
+            $contador++;
+        }
+
+        $carrito =  [
+                        "productos" => $productos,
+                        "subtotal" => $subtotal,
+                        "contador" => $contador
+                    ];
 
         return response()->json($carrito);
 

@@ -53,10 +53,14 @@ class UsuariosController extends Controller
             Session::flash("alerta","Usuario Actualizado");
         }else{
             $usu = new UsuariosModel();
-            $usu->cli_pass = md5($req->input('pass'));
+            
             Session::flash("tipo","success");
             Session::flash("alerta","Usuario Registrado Correctamente");
-        }        
+        }
+
+        if($req->has("pass")){
+             $usu->cli_pass = md5($req->input('pass'));
+        }      
 
         $usu->cli_nombre = $req->input('name');
         $usu->cli_apellido = $req->input('last');
@@ -66,7 +70,11 @@ class UsuariosController extends Controller
 
         $usu->save();
 
-        return redirect()->action("UsuariosController@index");
+        if($req->session()->get("tipo")!="1"){
+            return redirect()->action("UsuariosController@perfil");
+        }else{
+            return redirect()->action("UsuariosController@index");
+        }
     }
 
     function deleteClie(Request $req){
@@ -78,5 +86,19 @@ class UsuariosController extends Controller
 
         return redirect()->action("UsuariosController@index");
 
+    }
+
+    function perfil(Request $req){
+        $id = $req->session()->get("id");
+        $cliente = UsuariosModel::find($id);
+        $oneCli = $cliente;
+        $tipos = DB::table("tipo_cliente")->where("tc_visible",1)->get();
+        return view("admin.perfil", [
+                                        "id" => $id,
+                                        "oneCli" => $oneCli,
+                                        "tipos" => $tipos,
+                                        "tipoSelect" => $cliente->cli_tipo,
+                                        "cambioPerfil" => true
+                                    ]);
     }
 }
