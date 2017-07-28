@@ -70,7 +70,7 @@ class UsuariosController extends Controller
         $usu->cli_tipo = $req->input('tipo');
 
         $usu->save();
-
+        flash("¡Se guardaron exitosamente los datos!")->success();
         if($req->session()->get("tipo")!="1"){
             return redirect()->action("UsuariosController@perfil");
         }else{
@@ -84,7 +84,7 @@ class UsuariosController extends Controller
         $prod->cli_visible = 0;
 
         $prod->save();
-
+        flash("¡Se eliminaron los datos!")->error();
         return redirect()->action("UsuariosController@index");
 
     }
@@ -123,7 +123,7 @@ class UsuariosController extends Controller
                     ->where("pro_id" , $req->input("id"))
                     ->where("cli_id" , $id)
                     ->update(["fav_estatus" => 0]);
-
+        flash("¡Se elimino de favoritos")->error();
         return redirect()->action("UsuariosController@favoritos");        
     }
 }

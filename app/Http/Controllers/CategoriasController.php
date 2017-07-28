@@ -29,7 +29,7 @@ class CategoriasController extends Controller
         $cat->cat_nombre = $req->input('name');
 
         $cat->save();
-
+        flash("¡Se guardo exitosamente la categoria")->success();
         return redirect()->action("CategoriasController@index");     
     }
 
@@ -39,7 +39,7 @@ class CategoriasController extends Controller
         $cat->cat_visible = 0;
 
         $cat->save();
-
+        flash("¡Se eliminaron los datos!")->error();
         return redirect()->action("CategoriasController@index");
 
     }
@@ -50,7 +50,7 @@ class CategoriasController extends Controller
         $cat->cat_nombre = $req->input('name');
 
         $cat->save();
-
+        flash("¡Se actualizaron exitosamente los datos!");
         return redirect()->action("CategoriasController@index");
     }
 }

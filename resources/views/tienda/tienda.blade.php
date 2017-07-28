@@ -12,7 +12,7 @@
     
 	 <link rel="icon" type="image/png" href="{{URL::asset('templete/images/favicon.png')}}">
 	
-     <title>Fajar</title>
+     <title>Joyeria Diamante Rojo</title>
     
      <meta name="description" content="">
     
@@ -126,7 +126,7 @@
 										data-easing="Power4.easeOut"
 										data-endspeed="400"
 										data-endeasing="Power1.easeIn"
-										style="z-index: 11"><a href="products.html" class="btn btn-bordered">COMPRAR AHORA</a>
+										style="z-index: 11">
 									</div>
 								</li>
 								

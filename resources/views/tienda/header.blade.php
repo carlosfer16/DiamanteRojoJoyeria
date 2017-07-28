@@ -31,8 +31,8 @@
         ============================================= -->
         <div class="header-inner clearrfix container">
             
-            <a href="index.html" class="navbar-brand">
-                <img src="{{URL::asset('templete/images/logo.png')}}" alt="" title=""></a>
+            
+                <img src="{{URL::asset('templete/images/logo.png')}}" alt="" title="">
             
             
             @if(Session::has("id"))
@@ -59,7 +59,7 @@
                 <li>
                     <i class="icon-truck2"></i>
                     <p>Envios Gratis<span>
-                            En Ordenes Arriba De $150</span></p>
+                            En Ordenes Arriba De $5000</span></p>
                 </li>
             </ul>
             

@@ -72,6 +72,7 @@ class Productos extends Controller
         $prod->pro_costo = $datos->input('costo');
         $prod->cat_id = $datos->input("cat");
         $prod->save();
+        flash("¡Se guardaron exitosamente el producto!")->success();
 
         return redirect()->action("Productos@getProductos");
     }   
@@ -83,7 +84,7 @@ class Productos extends Controller
         $prod->pro_visible = 0;
 
         $prod->save();
-
+        flash("¡Se elimino el producto!")->error();
         return redirect()->action("Productos@getProductos");
 
     }

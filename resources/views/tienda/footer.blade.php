@@ -14,6 +14,11 @@
                     <div class="footer-widget">
                         <h4>Nosotros</h4>
                         <p>Somos una empresa mexicana dedicada a la joyeria nacional</p>
+                        <p>-----------------------------------------------------------</p>
+                        <p><b>Integrantes:</b></p>
+                        <p>Dominguez Bueno Ricardo</p>
+                        <p>Medina Mendoza Carlos Fernando</p>
+                        <p>Santiesteban Zazueta Ernesto</p>
                     </div>
                 </div>
                 
@@ -64,7 +69,7 @@
         
         <!-- Copyrights
         ============================================= -->
-        <p class="copyright">Copyright © 2015 Fajar. 
+        <p class="copyright">Copyright © 2017 Ing. Web 
                 rights reserved.</p>
         
     </div>

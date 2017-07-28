@@ -1,6 +1,7 @@
 @extends('layouts.body')
 
-@section('content')    
+@section('content') 
+@include('flash::message')   
     <div class="row">
         @if($id!=0)
             <div class="col-md-6 col-md-offset-3">
@@ -15,4 +16,9 @@
             </div>
         @endif        
     </div>
+    <script type="text/javascript">
+    setTimeout(function(){
+        $(".alert").fadeOut(1500);
+    },1500)
+    </script>
 @stop

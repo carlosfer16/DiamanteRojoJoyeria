@@ -44,7 +44,7 @@ class CarritoController extends Controller
         }else{
             $res = false;
         }
-
+        flash("¡Se agrego exitosamente al carrito!")->success();
         return response()->json($carrito);
     }
 
@@ -54,7 +54,7 @@ class CarritoController extends Controller
         DB::table('favoritos')->insert(
             ['pro_id' => $proId, 'cli_id' => $req->session()->get("id")]
         );
-
+        flash("¡Se agrego exitosamente a la lista de favoritos!")->success();
         return response()->json(true);
     }
 
@@ -88,7 +88,7 @@ class CarritoController extends Controller
                             ->where("pro_id", $id)
                             ->where("car_estado",0)
                             ->update(["car_estado" => 2]);
-
+        flash("¡Se elimino del carrito!")->error();
         return redirect()->action("CarritoController@verCarrito");
     }
 }

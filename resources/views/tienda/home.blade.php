@@ -1,6 +1,7 @@
 @extends('tienda.tienda')
 
 @section('content')
+@include('flash::message')
 <section id="featured-products" class="no-padding relative" style="margin-top:25px;">					
     <h2>Productos En Inventario</h2>
     
@@ -88,5 +89,10 @@
             <p> Ordenes donde sea<span></span><b class="tag">01-800-123-456</b></p>
         </div>
     </div>
-</div>		
+</div>	
+<script type="text/javascript">
+    setTimeout(function(){
+        $(".alert").fadeOut(1500);
+    },1500)
+</script>	
 @endsection
