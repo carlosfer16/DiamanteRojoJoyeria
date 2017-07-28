@@ -65,7 +65,28 @@ Route::post('carrito/getCarrito', "CarritoController@getCarrito");
 Route::post('carrito/addProdCarrito', "CarritoController@addCarrito");
 Route::post('carrito/addFavorito', "CarritoController@addFavorito");
 Route::get('carrito/verCarrito', "CarritoController@verCarrito");
-Route::get('carrito/deletePro', "CarritoController@deletePro");
+Route::get('clientes/perfil', "UsuariosController@perfil");
+Route::post('pagos/pagar', "PagosController@pagar");
+
+Route::get('storage/productos/{filename}', function ($filename)
+{
+    $path = storage_path('app/productos/' . $filename);
+
+    if (!File::exists($path)) {
+        return $path;
+        return "hola";
+        abort(404);
+        
+    }
+
+    $file = File::get($path);
+    $type = File::mimeType($path);
+
+    $response = Response::make($file, 200);
+    $response->header("Content-Type", $type);
+
+    return $response;
+});
 
 //Auth::routes();
 
