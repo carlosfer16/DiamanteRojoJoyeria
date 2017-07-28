@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ComentariosModel extends Model
 {
-    protected  $table = "vw_comentarios";
+    protected  $table = "comentarios";
     public $timestamps = false;
     protected $primaryKey = "com_id";
 }

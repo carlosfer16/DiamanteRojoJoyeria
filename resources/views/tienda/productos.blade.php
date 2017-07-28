@@ -12,10 +12,10 @@
             <li>
                 <div class="product-bordered">
                     <div class="product-thumb">
-                        <a href="#."><img src="{{URL::asset('templete/images/shop/1.jpg')}}" alt=""></a>
+                        <a href="{{url('productosdetalles?id=').$pro->pro_id}}"><img src="{{URL::asset('templete/images/shop/1.jpg')}}" alt=""></a>
                     </div>
                     <div class="product-description clearfix">
-                        <h3><a href="#.">{{$pro->pro_nombre}}</a></h3>
+                        <h3><a href="{{url('productosdetalles?id=').$pro->pro_id}}">{{$pro->pro_nombre}}</a></h3>
                         <p class="price">${{$pro->pro_costo}}</p>
                         <span class="double-border"></span>
                         @if(Session::has('id'))

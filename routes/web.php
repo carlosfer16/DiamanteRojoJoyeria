@@ -42,6 +42,9 @@ Route::get('login/cerrar', "LoginAdminController@logout");
 Route::get('productos', "Productos@tiendaProductosByCat");
 Route::get('productosdetalles', "Productos@tiendaProductosById");
 Route::post('productos/busqueda', "Productos@buscador");
+Route::post('comentarios/comentar', "ComentariosController@addComent");
+Route::get('administrador/comentarios', "ComentariosController@getValidar");
+
 
 
 //REPORTES

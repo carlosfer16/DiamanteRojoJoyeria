@@ -139,7 +139,10 @@ class Productos extends Controller
 
         $producto = ProductosModel::find($id);
 
-        $comentarios = ComentariosModel::where("com_estatus",1)->get();
+        $comentarios = DB::table("vw_comentarios")
+                            ->where("com_estatus",1)
+                            ->where("pro_id",$id)
+                            ->get();
 
         return view("productos.productosdetalles",  [
                                                         "categorias" => $categorias,
