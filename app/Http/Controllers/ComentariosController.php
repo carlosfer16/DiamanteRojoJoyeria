@@ -21,8 +21,32 @@ class ComentariosController extends Controller
     }
 
     function getValidar(Request $req){
-        $comentarios = DB::table("vw_comentarios")->where("com_estatus",0)->get();
+        $comentarios = DB::table("vw_comentarios")->where("com_estatus","!=",2)->get();
 
         return view("admin.validarComentarios", ["comentarios" => $comentarios]);
+    }
+
+    function aceptarComentario(Request $req){
+        $id = $req->input('id');
+
+        $com = ComentariosModel::find($id);
+
+        $com->com_estatus = 1;
+
+        $com->save();
+
+        return redirect()->action("ComentariosController@getValidar"); 
+    }
+
+    function deleteComentario(Request $req){
+        $id = $req->input('id');
+
+        $com = ComentariosModel::find($id);
+
+        $com->com_estatus = 2;
+
+        $com->save();
+
+        return redirect()->action("ComentariosController@getValidar"); 
     }
 }
